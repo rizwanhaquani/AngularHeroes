@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Guitar Project</title>
+<script src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+<script src="js/Guitar.js"></script>
+<link rel="stylesheet" href="css/Guitar.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+
+<body data-ng-app="fapp">
+	<div data-ng-controller="ctrl1">
+	<div class="main">
+	<audio autoplay loop>
+  	<source data-ng-src="guitarMusic.ogg" type="audio/ogg">
+  	<source data-ng-src="music/guitarMusic.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio> 
+	<h1 style="font-size:40px;font-style:italic;color:white; text-align:center;"> Guitar Hero</h1>
+	
+	<nav class="navbar navbar-inverse " role="navigation">
+		<ul  class="nav" class="nav nav-tabs">
+			<li role="presentation" data-ng-click="navHome()"><a href="#home">Home</a>
+			<ul data-ng-show="showHome">
+				<li ><a href="#">Electric</a></li>
+				<li><a href="#">Classic</a></li>
+			</ul>
+			</li>
+			<li role="presentation"><a href="#bio">Order</a></li>
+			
+			<li role="presentation"><a href="#Confirm">Confirmation</a></li>
+		</ul>
+	</nav>
+	
+	<br><br>
+
+<div data-ng-view>
+<!-- ajaxed content here -->
+</div>
+
+
+	</div>
+	
+	</div>
+</body>
+</html>
